@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--start-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="start" id="BYZ-38-t0r" customClass="ViewController" customModule="tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDd-ms-XEh">
+                                <rect key="frame" x="117" y="188" width="184" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="l6d-jC-gEM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.75778261170000005" green="0.30449637969999999" blue="0.36075769489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L2X-8t-pm3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evW-vb-Suv">
+                                <rect key="frame" x="117" y="394" width="184" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="gec-2e-wlt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Backward">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.75778261170000005" green="0.30449637969999999" blue="0.36075769489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backwardAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6LI-Wi-hjt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WQ-61-qO2">
+                                <rect key="frame" x="117" y="290" width="184" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="Aah-zA-SXn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Rewind">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.75778261170000005" green="0.30449637969999999" blue="0.36075769489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rewindAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQY-Oe-jMq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Speed, default : 271.71" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mx-ob-u1V">
+                                <rect key="frame" x="117" y="478" width="161" height="34"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDm-jZ-maH">
+                                <rect key="frame" x="117" y="509" width="98" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ZHj-ga-blX"/>
+                                </constraints>
+                                <color key="textColor" red="0.79199233309999995" green="0.22488028309999999" blue="0.3017249333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Star Picker's Tracker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRw-ud-Na3">
+                                <rect key="frame" x="54" y="83" width="306" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="zBJ-rN-m9c"/>
+                                </constraints>
+                                <color key="textColor" red="0.79199233309999995" green="0.22488028309999999" blue="0.3017249333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUm-Zj-JqW">
+                                <rect key="frame" x="42" y="563" width="334" height="270"/>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <color key="textColor" red="0.75778261170000005" green="0.30449637969999999" blue="0.36075769489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sA4-8w-DmU">
+                                <rect key="frame" x="223" y="509" width="78" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="h0R-lQ-o38"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Apply">
+                                    <color key="baseForegroundColor" red="0.75778261170000005" green="0.30449637969999999" blue="0.36075769489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="trackingSpeedApplyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQc-Ab-dlx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="qDm-jZ-maH" firstAttribute="top" secondItem="evW-vb-Suv" secondAttribute="bottom" constant="39" id="5gN-we-Jar"/>
+                            <constraint firstItem="qDm-jZ-maH" firstAttribute="top" secondItem="sA4-8w-DmU" secondAttribute="top" id="8NB-oh-Uwy"/>
+                            <constraint firstItem="evW-vb-Suv" firstAttribute="centerX" secondItem="rUm-Zj-JqW" secondAttribute="centerX" id="8tF-m7-xl0"/>
+                            <constraint firstItem="nDd-ms-XEh" firstAttribute="leading" secondItem="8WQ-61-qO2" secondAttribute="leading" id="9pZ-kn-r9m"/>
+                            <constraint firstItem="pRw-ud-Na3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="G0V-D3-uiy"/>
+                            <constraint firstItem="3mx-ob-u1V" firstAttribute="leading" secondItem="qDm-jZ-maH" secondAttribute="leading" id="Gzh-SK-qBW"/>
+                            <constraint firstItem="evW-vb-Suv" firstAttribute="trailing" secondItem="sA4-8w-DmU" secondAttribute="trailing" id="HEi-br-rDX"/>
+                            <constraint firstItem="sA4-8w-DmU" firstAttribute="leading" secondItem="qDm-jZ-maH" secondAttribute="trailing" constant="8" symbolic="YES" id="N74-FB-rz1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rUm-Zj-JqW" secondAttribute="bottom" constant="29" id="ORq-0g-thO"/>
+                            <constraint firstItem="qDm-jZ-maH" firstAttribute="bottom" secondItem="sA4-8w-DmU" secondAttribute="bottom" id="OX6-QI-RKL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3mx-ob-u1V" secondAttribute="trailing" constant="136" id="PUX-m4-etN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rUm-Zj-JqW" secondAttribute="trailing" constant="38" id="PZD-b8-Pel"/>
+                            <constraint firstItem="rUm-Zj-JqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="RJq-bP-mab"/>
+                            <constraint firstItem="8WQ-61-qO2" firstAttribute="trailing" secondItem="evW-vb-Suv" secondAttribute="trailing" id="WrR-1p-RmN"/>
+                            <constraint firstItem="evW-vb-Suv" firstAttribute="top" secondItem="8WQ-61-qO2" secondAttribute="bottom" constant="28" id="Ygv-aj-A8q"/>
+                            <constraint firstItem="nDd-ms-XEh" firstAttribute="top" secondItem="pRw-ud-Na3" secondAttribute="bottom" constant="32" id="Zmg-9d-iv0"/>
+                            <constraint firstItem="rUm-Zj-JqW" firstAttribute="top" secondItem="qDm-jZ-maH" secondAttribute="bottom" constant="20" id="h8M-S6-tv1"/>
+                            <constraint firstItem="8WQ-61-qO2" firstAttribute="top" secondItem="nDd-ms-XEh" secondAttribute="bottom" constant="26" id="ifv-h9-bBA"/>
+                            <constraint firstItem="pRw-ud-Na3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jje-fS-CGa"/>
+                            <constraint firstItem="3mx-ob-u1V" firstAttribute="top" secondItem="evW-vb-Suv" secondAttribute="bottom" constant="8" symbolic="YES" id="k6V-ah-dYz"/>
+                            <constraint firstItem="evW-vb-Suv" firstAttribute="leading" secondItem="3mx-ob-u1V" secondAttribute="leading" id="loc-qh-8ZU"/>
+                            <constraint firstItem="8WQ-61-qO2" firstAttribute="leading" secondItem="evW-vb-Suv" secondAttribute="leading" id="o4b-Tp-uIe"/>
+                            <constraint firstItem="rUm-Zj-JqW" firstAttribute="top" secondItem="3mx-ob-u1V" secondAttribute="bottom" constant="51" id="q6m-mF-Ja1"/>
+                            <constraint firstItem="nDd-ms-XEh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="r4g-TG-OgO"/>
+                            <constraint firstItem="pRw-ud-Na3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="tLk-hV-7Nm"/>
+                            <constraint firstItem="nDd-ms-XEh" firstAttribute="trailing" secondItem="8WQ-61-qO2" secondAttribute="trailing" id="tR4-w6-Qx3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backwardButton" destination="evW-vb-Suv" id="PBN-fJ-7Mz"/>
+                        <outlet property="consoleView" destination="rUm-Zj-JqW" id="zaz-ba-FK1"/>
+                        <outlet property="rewindButton" destination="8WQ-61-qO2" id="33Y-N5-BJv"/>
+                        <outlet property="startButton" destination="nDd-ms-XEh" id="GKk-Df-NSx"/>
+                        <outlet property="trackingSpeedApplyButton" destination="sA4-8w-DmU" id="reQ-jO-mk2"/>
+                        <outlet property="trackingSpeedTextField" destination="qDm-jZ-maH" id="9G7-8g-rnQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
