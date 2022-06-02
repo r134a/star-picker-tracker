@@ -13,34 +13,41 @@
 #define BACKWARD 4
 #define FORWARD 5
 
-// AccelStepper stepper(AccelStepper::HALF4WIRE, motorPin4, motorPin2, motorPin3, motorPin1);
-AccelStepper stepper(AccelStepper::HALF4WIRE, motorPin1, motorPin3, motorPin2, motorPin4);
+AccelStepper stepper(AccelStepper::HALF4WIRE, motorPin4, motorPin2, motorPin3, motorPin1);
 
 BLEService realisStartrackerBluetoothService("4587B400-28DF-4DA5-B617-BC2B58CE7930");
 BLEUnsignedIntCharacteristic commandCharacteristic("4587B401-28DF-4DA5-B617-BC2B58CE7930", BLERead | BLEWrite);
 BLEStringCharacteristic stateCharacteristic("4587B402-28DF-4DA5-B617-BC2B58CE7930", BLERead | BLENotify, 512);
 BLEDoubleCharacteristic trackingSpeedCharacteristic("4587B403-28DF-4DA5-B617-BC2B58CE7930", BLERead | BLEWrite);
 
+const long MAX_TRACKING_TIME = 240000; // milles
 const double MAX_TRACKING_SPEED = 1000.0;
-const double TRACKING_SPEED = 271.71;
+// const double TRACKING_SPEED = 271.71;
+const double TRACKING_SPEED = 273.50;
 const double MOVING_SPEED = 900.0;
-
-long positionCheckInterval = 5000L;
-long previousTime = millis();
 
 void writeStateToBLE(String message)
 {
     stateCharacteristic.writeValue(message);
 }
 
+long positionCheckInterval = 5000L;
+long positionCheckTime = millis();
 void writeStatePositionToBLE()
 {
     long currentTime = millis();
-    if ((currentTime - previousTime) > positionCheckInterval)
+    if ((currentTime - positionCheckTime) > positionCheckInterval)
     {
-        previousTime = currentTime;
+        positionCheckTime = currentTime;
         writeStateToBLE(String(stepper.currentPosition()));
     }
+}
+
+long startTrackingTime = millis();
+boolean isStopTracking()
+{
+    long currentTime = millis();
+    return ((currentTime - startTrackingTime) >= MAX_TRACKING_TIME);
 }
 
 void setup()
@@ -99,6 +106,11 @@ void loop()
         trackingSpeed = trackingSpeedCharacteristic.value();
         Serial.print("recv : tracking speed = ");
         Serial.println(trackingSpeed);
+    }
+
+    if (isStopTracking())
+    {
+        cmd = STOP;
     }
 
     switch (cmd)
