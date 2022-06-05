@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController title="start" id="BYZ-38-t0r" customClass="ViewController" customModule="tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDd-ms-XEh">
-                                <rect key="frame" x="117" y="188" width="184" height="76"/>
+                                <rect key="frame" x="117" y="188" width="198" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="l6d-jC-gEM"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evW-vb-Suv">
-                                <rect key="frame" x="117" y="394" width="184" height="76"/>
+                                <rect key="frame" x="117" y="394" width="198" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="gec-2e-wlt"/>
                                 </constraints>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WQ-61-qO2">
-                                <rect key="frame" x="117" y="290" width="184" height="76"/>
+                                <rect key="frame" x="117" y="290" width="198" height="76"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="Aah-zA-SXn"/>
                                 </constraints>
@@ -79,13 +79,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Speed, default : 271.71" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mx-ob-u1V">
-                                <rect key="frame" x="117" y="478" width="161" height="34"/>
+                                <rect key="frame" x="117" y="478" width="175" height="34"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDm-jZ-maH">
-                                <rect key="frame" x="117" y="509" width="98" height="34"/>
+                                <rect key="frame" x="117" y="509" width="112" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="ZHj-ga-blX"/>
                                 </constraints>
@@ -94,7 +94,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="Star Picker's Tracker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pRw-ud-Na3">
-                                <rect key="frame" x="54" y="83" width="306" height="73"/>
+                                <rect key="frame" x="54" y="83" width="320" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="zBJ-rN-m9c"/>
                                 </constraints>
@@ -103,14 +103,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUm-Zj-JqW">
-                                <rect key="frame" x="42" y="563" width="334" height="270"/>
+                                <rect key="frame" x="42" y="563" width="348" height="300"/>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <color key="textColor" red="0.75778261170000005" green="0.30449637969999999" blue="0.36075769489999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sA4-8w-DmU">
-                                <rect key="frame" x="223" y="509" width="78" height="34"/>
+                                <rect key="frame" x="237" y="509" width="78" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="h0R-lQ-o38"/>
                                 </constraints>

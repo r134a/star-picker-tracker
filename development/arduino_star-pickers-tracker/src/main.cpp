@@ -13,7 +13,7 @@
 #define BACKWARD 4
 #define FORWARD 5
 
-AccelStepper stepper(AccelStepper::HALF4WIRE, motorPin4, motorPin2, motorPin3, motorPin1);
+AccelStepper stepper(AccelStepper::HALF4WIRE, motorPin1, motorPin3, motorPin2, motorPin4);
 
 BLEService realisStartrackerBluetoothService("4587B400-28DF-4DA5-B617-BC2B58CE7930");
 BLEUnsignedIntCharacteristic commandCharacteristic("4587B401-28DF-4DA5-B617-BC2B58CE7930", BLERead | BLEWrite);
@@ -23,7 +23,7 @@ BLEDoubleCharacteristic trackingSpeedCharacteristic("4587B403-28DF-4DA5-B617-BC2
 const long MAX_TRACKING_TIME = 240000; // milles
 const double MAX_TRACKING_SPEED = 1000.0;
 // const double TRACKING_SPEED = 271.71;
-const double TRACKING_SPEED = 273.50;
+const double TRACKING_SPEED = 268.81;
 const double MOVING_SPEED = 900.0;
 
 void writeStateToBLE(String message)
@@ -41,13 +41,6 @@ void writeStatePositionToBLE()
         positionCheckTime = currentTime;
         writeStateToBLE(String(stepper.currentPosition()));
     }
-}
-
-long startTrackingTime = millis();
-boolean isStopTracking()
-{
-    long currentTime = millis();
-    return ((currentTime - startTrackingTime) >= MAX_TRACKING_TIME);
 }
 
 void setup()
@@ -108,11 +101,6 @@ void loop()
         Serial.println(trackingSpeed);
     }
 
-    if (isStopTracking())
-    {
-        cmd = STOP;
-    }
-
     switch (cmd)
     {
     case START:
@@ -130,6 +118,7 @@ void loop()
         isBackward = false;
         stepper.stop();
         Serial.print("STOP");
+        Serial.print(stepper.currentPosition());
 
         // backward로 시작점 보다 이전이라면 새로운 시작점으로 셋팅
         if (stepper.currentPosition() < 0)
@@ -161,7 +150,7 @@ void loop()
     {
         stepper.setSpeed(trackingSpeed);
         stepper.runSpeed();
-        writeStatePositionToBLE();
+        // writeStatePositionToBLE();
     }
     else if (isRewind)
     {
